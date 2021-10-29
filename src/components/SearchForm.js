@@ -8,10 +8,12 @@ class SearchForm extends React.Component {
     searchQuery: "",
   };
 
+  //When user types into the search bar it changes the searchQuery State
   onChange = (e) => {
     this.setState({ searchQuery: e.target.value });
   };
 
+  //When user submits form it calls onSearch and changes the url in the navigation bar
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSearch(this.state.searchQuery);

@@ -9,12 +9,14 @@ import { cats, dogs, computers } from "./components/StaticNav";
 import apiKey from "./config";
 
 class App extends React.Component {
+  // Declaring State
   state = {
     photos: [],
     isLoading: true,
     title: "",
   };
 
+  //When app loads, call default search
   componentDidMount() {
     this.searchQuery();
   }
@@ -55,7 +57,7 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="container">
           <SearchForm onSearch={this.searchQuery} />
-
+          {/* Check isLoading State and display spinner if true */}
           {this.state.isLoading ? (
             <img src="loading.gif" alt="loading" />
           ) : (

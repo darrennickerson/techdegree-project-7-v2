@@ -64,6 +64,7 @@ class App extends React.Component {
                 <Redirect to="/cats" />
               </Route>
               <Route
+                exact
                 path="/search/:term"
                 render={() => (
                   <PhotoContainer

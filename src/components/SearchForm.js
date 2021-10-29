@@ -19,17 +19,6 @@ class SearchForm extends React.Component {
     e.currentTarget.reset();
   };
 
-  componentDidUpdate(prevProps) {
-    const url = window.location.pathname;
-    const prevPath = prevProps.location.pathname;
-
-    if (url.includes("/search")) {
-      if (prevPath !== url) {
-        this.props.onSearch(url.slice(8));
-      }
-    }
-  }
-
   render() {
     return (
       <div>
